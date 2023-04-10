@@ -1,0 +1,37 @@
+dataset_path: ../data/somof_data_3dpw
+dataset_path_3dpw: ../data/3dpw # insert absolute path to dataset
+num_joints: 13
+hip_mode: "velocity"
+pose_box_size: 2100 # in mm
+if_random_rotation: True
+if_reverse: False
+pretrain_somof: True
+if_rescale: True
+
+history_length: 16
+prediction_horizon_train: 30
+prediction_horizon_eval: 14
+prediction_horizon: 14
+prediction_horizon_3dpw: 30
+random_prediction_horizon: True
+curriculum_it: 700
+
+lr: 1.e-3
+batch_size: 32
+output_path: ../output/somof
+batch_size_eval: 80
+eval_frequency: 100
+num_epochs: 3000
+num_iteration_eval: 20
+num_workers: 4
+
+clip_grad_norm: 1.
+encoder_hidden_size: 96
+bottleneck_size: 96
+decoder_hidden_size: 96
+output_size: 3 #128
+latent_size: 5
+enc_num_layers: 1
+dec_num_layers: 1
+dropout: 0.0
+node_dropout: 0.
