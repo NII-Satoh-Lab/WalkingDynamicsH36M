@@ -1,0 +1,47 @@
+dataset_path: ../data/h36m # insert path to H36M dataset
+dataset_val_path: ../data/WalkingDynamicsH36M
+num_joints: 25
+hip_mode: norm # chose between "norm" and "velocity"
+pose_box_size: 1100
+if_random_rotation: true
+if_rescale: false
+if_reverse: false
+dataset_downsample_factor: 2 # divide fps by this number while extracting tracks from h36m during training
+action: all # all actions for training specified under ACTIONS dataset/h36m_dataset
+
+history_length: 50
+prediction_horizon: 100
+prediction_horizon_eval: 100
+prediction_horizon_train: 100
+random_prediction_horizon: true
+curriculum_it: 100
+stop_curriculum_it: 9000
+
+lr: 0.001
+batch_size: 128
+output_path: ../output/wdh36m
+batch_size_eval: 128
+eval_frequency: 3 # save visual sample every eval_frequency epochs
+num_epochs: 500
+num_iteration_eval: 20
+num_workers: 4
+
+bottleneck_size: 96
+clip_grad_norm: 1.0
+dec_num_layers: 1
+decoder_hidden_size: 96
+dropout: 0.0
+enc_num_layers: 1
+encoder_hidden_size: 96
+output_size: 3
+latent_size: 5
+node_dropout: 0.0
+
+
+
+# output_log_path: ./output/h36m/hip_extra_node_my_dataset_val/hist_50_pred_horiz_100/Mar06_17-15-09_pec4140a_norm_w_1_1e-5_walk_together_input_batch_128_augmentation
+# output_path: ./output/h36m/hip_extra_node_my_dataset_val/hist_50_pred_horiz_100_best_run
+
+test_actions:
+- WalkTogether
+- Walking
