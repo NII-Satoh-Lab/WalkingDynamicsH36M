@@ -14,7 +14,6 @@ class MGS2S(nn.Module):
                  bottleneck_size: int,
                  decoder_hidden_size: int,
                  output_size: int,
-                 latent_size: int,
                  position: bool = False,
                  G: Union[torch.Tensor, torch.nn.Parameter] = None,
                  T: torch.Tensor = None,
@@ -24,7 +23,6 @@ class MGS2S(nn.Module):
         self.param_groups = param_groups
 
         self._num_nodes = num_nodes
-        self._latent_size = latent_size
         self._position = position
 
         self.encoder = Encoder(num_nodes=num_nodes,
@@ -39,7 +37,6 @@ class MGS2S(nn.Module):
                                input_size=bottleneck_size,
                                feature_size=input_size,
                                hidden_size=decoder_hidden_size,
-                               latent_size=0,
                                output_size=output_size,
                                position=position,
                                G=G,

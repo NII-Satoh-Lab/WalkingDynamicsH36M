@@ -5,13 +5,11 @@
 This repository contains the code for our extended abstract at the 
 [CVPR 2023 Precognition Workshop](https://sites.google.com/view/ieeecvf-cvpr2023-precognition/ "CVPR 2023 Precognition Workshop")
 
-
 WalkingDynamicsH36M: a Benchmarking Dataset for Long-term Motion and Trajectory Forecasting
 
 *Cecilia Curreli, Andreu Girbau, Shin’ichi Satoh*
 
 [paper]()
-
 
 We present WalkingDynamicsH36M, a long-term 3D human pose and trajectory dynamics prediction benchmarking dataset extracted from H36M. Our graph-based model GraDyn achieves competitive results on the SoMoF dataset, predicting realistic and consistent motions on our benchmark. We believe the proposed benchmark dataset and model can serve as a foundation for future research in this field.
 

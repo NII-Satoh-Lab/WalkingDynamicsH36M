@@ -13,7 +13,6 @@ class Decoder(nn.Module):
                  feature_size: int,
                  input_size: int,
                  hidden_size: int,
-                 latent_size: int,
                  output_size: int,
                  position: bool,
                  G: Union[torch.Tensor, torch.nn.Parameter] = None,
@@ -42,13 +41,13 @@ class Decoder(nn.Module):
         else: 
             assert 0, "Not implemented"
             
-        self.initial_hidden_h = StaticGraphLinear(latent_size + input_size + feature_size,
+        self.initial_hidden_h = StaticGraphLinear(input_size + feature_size,
                                                   hidden_size,
                                                   num_nodes=num_nodes,
                                                   learn_influence=True,
                                                   node_types=T)
 
-        self.rnn = StaticGraphGRU(feature_size + latent_size + input_size,
+        self.rnn = StaticGraphGRU(feature_size + input_size,
                                   hidden_size,
                                   num_nodes=num_nodes,
                                   num_layers=dec_num_layers,

@@ -34,7 +34,6 @@ dropout: 0.0
 enc_num_layers: 1
 encoder_hidden_size: 96
 output_size: 3
-latent_size: 5
 node_dropout: 0.0
 
 

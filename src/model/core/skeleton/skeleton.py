@@ -52,6 +52,12 @@ class Skeleton():
         joint_ids = [unique_strings.index(s) for s in joint_id_string_wo]
         return torch.tensor(joint_ids)
     
+    def extract_limb_length(self, kpts):
+        limbdist = []
+        for l1,l2 in self.limbseq:
+            limbdist.append( (kpts[..., l1, :] - kpts[..., l2, :]).norm(dim=-1))
+        return torch.stack(limbdist, dim=-1)
+
     #################  functions to obtain input poses ########################################################################################
     
     def transform_seq_w_hip_to_input_space(self, data):
