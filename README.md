@@ -20,6 +20,7 @@ tThe trajectories from the test split are distributed homogenously in space.
 
 <img src="WalkingDynamicsH36M/images/wd36_multiple_futures.jpeg" alt= “” width="500"> <img src="WalkingDynamicsH36M/images/Trajectory_test_sequences_centered_t_in_frames.png" alt= “” width="570">
 
+
 Our model GraDyn (in red) generates more realistic images than SoMoFormer (in blue), which predicts trajectories closer to the ground truth. 
 ![](/WalkingDynamicsH36M/images/gradyn_somoformer_outputs.gif) 
 
