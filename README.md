@@ -22,7 +22,7 @@ WalkingDynamicsH36M is suitable for probabilistic mulitmodal future prediction. 
 </p>
 
 
-Our model GraDyn (in red) generates more realistic images than SoMoFormer (in blue), which predicts trajectories closer to the ground truth. 
+Our model $\textcolor{red}{\textsf{GraDyn}}$ generates more realistic images than $\textcolor{blue}{\textsf{SoMoFormer}}$, which predicts trajectories closer to the ground truth. 
 
 ![](/WalkingDynamicsH36M/images/gradyn_somoformer_outputs.gif) 
 
