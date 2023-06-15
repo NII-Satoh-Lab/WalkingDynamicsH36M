@@ -76,19 +76,25 @@ pip install pytorchvideo
 Register and follow download instruction as described in the official page:
 http://vision.imar.ro/human3.6m/description.php
 
-Put folder tracks ("S1", "S5", etc) in data/h36m
 ```
 mkdir data
 cd data
 mkdir h36m
 ```
 
-Create the track files for our WalkingDynamicsH36M dataset into the data/ folder
+Download H36M in data/h36m or simply put folder tracks ("S1", "S5", etc) in data/h36m.
 
-Copy the the images.json files to /data (for visualization purposes)
+Create the track files for our WalkingDynamicsH36M dataset into the data/ folder:
 ```
 cd WalkingDynamicsH36M
-cp ../../WalkingDynamicsH36M/*images.json ./
+python3 generate_wdh36m_tracks.py --h36m_path=../data/h36m
+```
+
+Copy the the poses.json and images.json files to /data: 
+```
+cd WalkingDynamicsH36M
+cp ./*images.json ../data/WalkingDynamicsH36M/
+mv ./*poses.json ../data/WalkingDynamicsH36M/
 ```
 Note that for the training protocol, we still require all training tracks of H36M.
 
