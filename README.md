@@ -15,10 +15,11 @@ WalkingDynamicsH36M: a Benchmarking Dataset for Long-term Motion and Trajectory 
 
 We present WalkingDynamicsH36M, a long-term 3D human pose and trajectory dynamics prediction benchmarking dataset extracted from H36M. Our graph-based model GraDyn achieves competitive results on the SoMoF dataset, predicting realistic and consistent motions on our benchmark. We believe the proposed benchmark dataset and model can serve as a foundation for future research in this field.
 
-WalkingDynamicsH36M is suitable for probabilistic mulitmodal future prediction. What is multimodality? The same past can generate different futures, differet so-called future modes. An example on the left figure: how futures from different tracks in the validation split can match the same past. On the right You can see that 
-tThe trajectories from the test split are distributed homogenously in space. 
+WalkingDynamicsH36M is suitable for probabilistic mulitmodal future prediction. What is multimodality? The same past can generate different futures, differet so-called future modes. An example on the left figure: how futures from different tracks in the validation split can match the same past. On the right you can see that 
+the trajectories from the test split are distributed homogenously in space. 
 
-<img src="WalkingDynamicsH36M/images/wd36_multiple_futures.jpeg" alt= “” width="500"> <img src="WalkingDynamicsH36M/images/Trajectory_test_sequences_centered_t_in_frames.png" alt= “” width="570">
+<img src="WalkingDynamicsH36M/images/wd36_multiple_futures.jpeg" alt= “” width="300"> <img src="WalkingDynamicsH36M/images/Trajectory_test_sequences_centered_t_in_frames.png" alt= “” width="342">
+
 
 Our model GraDyn (in red) generates more realistic images than SoMoFormer (in blue), which predicts trajectories closer to the ground truth. 
 ![](/WalkingDynamicsH36M/images/gradyn_somoformer_outputs.gif) 
